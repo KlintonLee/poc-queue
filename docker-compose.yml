@@ -1,0 +1,19 @@
+version: '3.7'
+
+services:
+  rabbitmq:
+    container_name: poc_queue_rabbitmq
+    image: rabbitmq:3-management
+    environment:
+      - RABBITMQ_ERLANG_COOKIE=SWQOKODSQALRPCLNMEQG
+      - RABBITMQ_DEFAULT_USER=rabbitmq
+      - RABBITMQ_DEFAULT_PASS=123456
+      - RABBITMQ_DEFAULT_VHOST=/
+    ports:
+      - 15672:15672
+      - 5672:5672
+    networks:
+      - poc_queue_network
+
+networks:
+  poc_queue_network:
