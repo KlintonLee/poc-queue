@@ -36,6 +36,17 @@ public class ImageMedia {
         return this;
     }
 
+    @Override
+    public String toString() {
+        return "ImageMedia{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", contentType='" + contentType + '\'' +
+                ", location='" + location + '\'' +
+                ", status=" + status +
+                '}';
+    }
+
     public String getId() {
         return id;
     }
